@@ -23,7 +23,7 @@ public class SearchWiki {
                         "}";
 
     @BeforeAll
-    static void BeforeAll() {
+    static void beforeAll() {
         Configuration.baseUrl = "https://github.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
@@ -31,7 +31,7 @@ public class SearchWiki {
 
 
     @Test
-    void FillForm() {
+    void fillForm() {
         open(uri);
 
         $("#wiki-tab").click();
@@ -41,7 +41,7 @@ public class SearchWiki {
     }
 
     @AfterAll
-    static void TearDown(){
+    static void tearDown(){
         Selenide.closeWebDriver();
     }
 
